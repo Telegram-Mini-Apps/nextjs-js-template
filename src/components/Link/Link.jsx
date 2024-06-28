@@ -1,26 +1,23 @@
 import { useUtils, classNames } from '@tma.js/sdk-react';
-import { type FC, type MouseEventHandler, type JSX, useCallback } from 'react';
-import { type LinkProps as NextLinkProps, default as NextLink } from 'next/link';
+import { useCallback } from 'react';
+import NextLink from 'next/link';
 
 import './styles.css';
 
-export interface LinkProps extends NextLinkProps, Omit<JSX.IntrinsicElements['a'], 'href'> {
-}
-
-export const Link: FC<LinkProps> = ({
+export function Link({
   className,
   onClick: propsOnClick,
   href,
   ...rest
-}) => {
+}) {
   const utils = useUtils();
 
-  const onClick = useCallback<MouseEventHandler<HTMLAnchorElement>>((e) => {
+  const onClick = useCallback((e) => {
     propsOnClick?.(e);
 
     // Compute if target path is external. In this case we would like to open link using
     // TMA method.
-    let path: string;
+    let path;
     if (typeof href === 'string') {
       path = href;
     } else {
@@ -47,4 +44,4 @@ export const Link: FC<LinkProps> = ({
       className={classNames(className, 'link')}
     />
   );
-};
+}

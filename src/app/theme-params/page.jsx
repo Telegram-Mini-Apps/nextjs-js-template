@@ -3,7 +3,7 @@
 import { useThemeParams } from '@tma.js/sdk-react';
 import { List } from '@telegram-apps/telegram-ui';
 
-import { DisplayData } from '@/components/DisplayData/DisplayData';
+import { DisplayData } from '@/components/DisplayData/DisplayData.jsx';
 
 export default function ThemeParamsPage() {
   const themeParams = useThemeParams();
@@ -24,4 +24,4 @@ export default function ThemeParamsPage() {
       />
     </List>
   );
-};
+}

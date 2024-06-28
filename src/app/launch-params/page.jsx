@@ -3,8 +3,11 @@
 import { useLaunchParams } from '@tma.js/sdk-react';
 import { List } from '@telegram-apps/telegram-ui';
 
-import { DisplayData } from '@/components/DisplayData/DisplayData';
+import { DisplayData } from '@/components/DisplayData/DisplayData.jsx';
 
+/**
+ * @returns {JSX.Element}
+ */
 export default function LaunchParamsPage() {
   const lp = useLaunchParams();
 
@@ -23,4 +26,4 @@ export default function LaunchParamsPage() {
       />
     </List>
   );
-};
+}

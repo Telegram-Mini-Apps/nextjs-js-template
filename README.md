@@ -4,7 +4,7 @@ This template demonstrates how developers can implement a web application on the
 Mini Apps platform using the following technologies and libraries:
 
 - [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [TON Connect](https://docs.ton.org/develop/dapps/ton-connect/overview)
 - [@tma.js SDK](https://docs.telegram-mini-apps.com/packages/tma-js-sdk)
 - [Telegram UI](https://github.com/Telegram-Mini-Apps/TelegramUI)
@@ -73,7 +73,7 @@ link (`http://localhost:3000` in this example) in your browser.
 It is important to note that some libraries in this template, such as `@tma.js/sdk`, are not
 intended for use outside of Telegram.
 
-Nevertheless, they appear to function properly. This is because the `src/hooks/useTelegramMock.ts`
+Nevertheless, they appear to function properly. This is because the `src/hooks/useTelegramMock.js`
 file, which is imported in the application's `Root` component, employs the `mockTelegramEnv`
 function to simulate the Telegram environment. This trick convinces the application that it is
 running in a Telegram-based environment. Therefore, be cautious not to use this function in

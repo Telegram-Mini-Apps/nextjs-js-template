@@ -1,6 +1,6 @@
 'use client';
 
-import { type PropsWithChildren, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import {
   SDKProvider,
   useLaunchParams,
@@ -21,7 +21,7 @@ import { useDidMount } from '@/hooks/useDidMount';
 
 import './styles.css';
 
-function App(props: PropsWithChildren) {
+function App(props) {
   const lp = useLaunchParams();
   const miniApp = useMiniApp();
   const themeParams = useThemeParams();
@@ -49,7 +49,7 @@ function App(props: PropsWithChildren) {
   );
 }
 
-function RootInner({ children }: PropsWithChildren) {
+function RootInner({ children }) {
   // Mock Telegram environment in development mode if needed.
   if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -79,7 +79,7 @@ function RootInner({ children }: PropsWithChildren) {
   );
 }
 
-export function Root(props: PropsWithChildren) {
+export function Root(props) {
   // Unfortunately, Telegram Mini Apps does not allow us to use all features of the Server Side
   // Rendering. That's why we are showing loader on the server side.
   const didMount = useDidMount();
