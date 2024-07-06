@@ -1,13 +1,13 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useInitData, useLaunchParams } from '@tma.js/sdk-react';
+import { useInitData, useLaunchParams } from '@telegram-apps/sdk-react';
 import { List, Placeholder } from '@telegram-apps/telegram-ui';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData';
 
 /**
- * @param {import('@tma.js/sdk-react').User} user
+ * @param {import('@telegram-apps/sdk-react').User} user
  * @returns {DisplayDataRow[]}
  */
 function getUserRows(user) {

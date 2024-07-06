@@ -1,4 +1,4 @@
-import { useUtils, classNames } from '@tma.js/sdk-react';
+import { useUtils, classNames } from '@telegram-apps/sdk-react';
 import { useCallback } from 'react';
 import NextLink from 'next/link';
 
